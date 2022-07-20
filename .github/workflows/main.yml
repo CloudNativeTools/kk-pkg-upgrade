@@ -35,7 +35,7 @@ jobs:
           git fetch kubesphere  
           git checkout -b ks-master kubesphere/master
           git checkout origin/master
-          git merge ks-master
+          git rebase ks-master
           git push origin master
           
 
