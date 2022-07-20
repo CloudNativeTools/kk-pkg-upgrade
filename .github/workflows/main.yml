@@ -32,9 +32,10 @@ jobs:
       - name: Run a one-line script
         run: |
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
-          git fetch kubesphere   
+          git fetch kubesphere  
+          git checkout -b ks-master kubesphere/master
           git checkout master
-          git merge kubesphere/master
+          git merge ks-master
           git push
           
 
