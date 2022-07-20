@@ -29,13 +29,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          git config --global user.email kubesphere@kubesphere.io
+          git config --global user.name kubesphere
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
           git fetch kubesphere  
           git checkout -b ks-master kubesphere/master
           git branch
           git checkout master
           git rebase ks-master
-      
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
