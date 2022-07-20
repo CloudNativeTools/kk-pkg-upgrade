@@ -34,9 +34,10 @@ jobs:
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
           git fetch kubesphere  
           git checkout -b ks-master kubesphere/master
-          git branch
           git checkout master
           git rebase ks-master
+          rm -rf .github
+          git commit -m "remove kubesphere actions"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
