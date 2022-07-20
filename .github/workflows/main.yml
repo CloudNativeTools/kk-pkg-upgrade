@@ -34,7 +34,7 @@ jobs:
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
           git fetch kubesphere  
           git checkout -b ks-master kubesphere/master
-          git checkout -b master origin/master
+          git checkout origin/master
           git rebase ks-master
           git push origin master
           
