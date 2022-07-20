@@ -31,6 +31,7 @@ jobs:
         run: |
           git config --global user.email kubesphere@kubesphere.io
           git config --global user.name kubesphere
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/CloudNativeTools/kk-pkg-upgrade
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
           git fetch kubesphere  
           git checkout -b ks-master kubesphere/master
@@ -39,11 +40,6 @@ jobs:
           rm -rf .github
           git add .
           git commit -m "remove kubesphere actions"
+          git push origin master
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: master
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          
 
