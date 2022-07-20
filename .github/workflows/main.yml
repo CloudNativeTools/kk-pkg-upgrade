@@ -37,6 +37,7 @@ jobs:
           git checkout master
           git rebase ks-master
           rm -rf .github
+          git add .
           git commit -m "remove kubesphere actions"
 
       - name: Push changes
