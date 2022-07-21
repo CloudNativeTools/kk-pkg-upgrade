@@ -34,6 +34,6 @@ jobs:
           rm -rf .github
           git add .
           git commit -m "remove kubesphere actions"
-          git push origin master:master --force
+          git push origin master:master
 
 
