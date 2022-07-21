@@ -27,9 +27,10 @@ jobs:
           git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/CloudNativeTools/kk-pkg-upgrade
           git remote add kubesphere https://github.com/kubesphere/kubesphere.git
           git fetch kubesphere  
-          git checkout -b ks-master kubesphere/master
-          git checkout master
-          git rebase ks-master
+          #git checkout -b ks-master kubesphere/master
+          #git checkout master
+          git rebase kubesphere/master
+          #git rebase ks-master
           rm -rf .github
           git add .
           git commit -m "remove kubesphere actions"
