@@ -1,0 +1,3 @@
+# jq --arg new "xxxxxxxxxxxxx"  '.harbor.arm64."v2.5.3" = $new' test.json
+
+v2.3.5 19f0474a18a689c2755728e9621ceaa43eb43fa2a12a60b884f7c91bf6907f77
