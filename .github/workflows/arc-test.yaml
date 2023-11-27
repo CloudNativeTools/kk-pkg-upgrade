@@ -17,4 +17,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo ${{  github.ref }}
+          git clone https://github.com/kubesphere/kubekey.git --depth=1
+          cd kubekey 
+          make kk
