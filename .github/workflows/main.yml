@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a one-line script
-        run: |
-          git config --global credential.https://github.com.username ci-bot
+      # - name: Run a one-line script
+      #   run: |
+      #     git config --global credential.https://github.com.username ci-bot
           
       - name: 'Checkout ${{ env.CONSOLE_REPO_NAME }}:${{ env.CONSOLE_BRANCH }}'
         uses: actions/checkout@v4
         with:
-          repository: kubesphere/kse-console
-          ref: kse-3.3
+          repository: kubesphere/kse-console-embed
+          ref: kse-release-4.1-edgewize
           token: ${{ secrets.ADMIN_GH_TOKEN }}
           path: kse-console-embed
       - uses: actions/checkout@v3
