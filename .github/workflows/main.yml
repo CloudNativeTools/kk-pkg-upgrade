@@ -13,17 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Run a one-line script
-      #   run: |
-      #     git config --global credential.https://github.com.username ci-bot
+      - name: Run a one-line script
+        run: |
+          git clone -b kse-release-4.1-edgewize --depth 1 https://ci-bot:${{ secrets.ADMIN_GH_TOKEN }}@github.com/kubesphere/kse-console-embed  kse-console-embed
           
-      - name: 'Checkout ${{ env.CONSOLE_REPO_NAME }}:${{ env.CONSOLE_BRANCH }}'
-        uses: actions/checkout@v4
-        with:
-          repository: kubesphere/kse-console-embed
-          ref: kse-release-4.1-edgewize
-          token: ${{ secrets.ADMIN_GH_TOKEN }}
-          path: kse-console-embed
+      # - name: 'Checkout ${{ env.CONSOLE_REPO_NAME }}:${{ env.CONSOLE_BRANCH }}'
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: kubesphere/kse-console-embed
+      #     ref: kse-release-4.1-edgewize
+      #     token: 
+      #     path: kse-console-embed
       - uses: actions/checkout@v3
         with:
           ref: master
