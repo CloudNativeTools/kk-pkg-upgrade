@@ -15,13 +15,11 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
-          git config --global user.email kubesphere@kubesphere.io
-          git config --global user.name kubesphere
+          git config --global credential.https://github.com.username ci-bot
           
       - name: 'Checkout ${{ env.CONSOLE_REPO_NAME }}:${{ env.CONSOLE_BRANCH }}'
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
           repository: kubesphere/kse-console
           ref: kse-3.3
           token: ${{ secrets.ADMIN_GH_TOKEN }}
