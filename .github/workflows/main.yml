@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
-          git clone -b kse-release-4.1-edgewize --depth 1 https://ks-ci-bot:${{ secrets.ADMIN_GH_TOKEN }}@github.com/kubesphere/kse-console-embed  kse-console-embed
+          git clone -b kse-release-4.1-edgewize --depth 1 https://user:${{ secrets.ADMIN_GH_TOKEN }}@github.com/kubesphere/kse-console-embed  kse-console-embed
           
       # - name: 'Checkout ${{ env.CONSOLE_REPO_NAME }}:${{ env.CONSOLE_BRANCH }}'
       #   uses: actions/checkout@v4
