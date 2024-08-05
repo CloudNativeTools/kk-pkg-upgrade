@@ -1,0 +1,15 @@
+name: auto-patch-release
+description: "自动 patch 离线包构建"
+body:
+  - id: component
+    type: input
+    attributes:
+      label: "组件名称"
+      placeholder: "请输入组件名称"
+      required: true
+  - id: version
+    type: input
+    attributes:
+      label: "版本号"
+      placeholder: "请输入组件版本号"
+      required: true

@@ -1,0 +1,10 @@
+name: patch release
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+    patch-release:
+        runs-on: ubuntu-latest
+        steps:
+          echo "${{ github.event.issue.body }}" 
