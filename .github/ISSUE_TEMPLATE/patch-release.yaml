@@ -6,10 +6,12 @@ body:
     attributes:
       label: "组件名称"
       placeholder: "请输入组件名称"
-      required: true
+    validations:
+      required: false
   - id: version
     type: input
     attributes:
       label: "版本号"
       placeholder: "请输入组件版本号"
-      required: true
+    validations:
+      required: false
