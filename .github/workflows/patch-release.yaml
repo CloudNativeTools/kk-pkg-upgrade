@@ -4,7 +4,8 @@ on:
     types: [opened, reopened]
 
 jobs:
-    patch-release:
-        runs-on: ubuntu-latest
-        steps:
-          echo "${{ github.event.issue.body }}" 
+  patch-release:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |       
+        echo "${{ github.event.issue.body }}" 
