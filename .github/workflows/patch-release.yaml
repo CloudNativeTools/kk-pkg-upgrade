@@ -8,4 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |       
-        echo "${{ github.event.issue.body }}" 
+        # echo "${{ github.event.issue.body }}" 
+        name=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=### 组件名称\n\n).+')
+        version=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=### 版本号\n\n).+')
+
+        echo $name
+        echo $version
