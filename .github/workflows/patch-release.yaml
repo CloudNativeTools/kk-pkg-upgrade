@@ -10,4 +10,5 @@ jobs:
     - run: |       
         echo "${{ github.event.issue.body }}"  > issue.txt
 
-        cat issue.txt
+        cat issue.txt | grep -oP '(?<=### 组件名称\n\n).+'
+        cat issue.txt | grep -oP '(?<=### 版本号\n\n).+'
